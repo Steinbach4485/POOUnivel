@@ -16,6 +16,16 @@ public class Aula2_2 {
         System.out.print("Digite seu nome: "); 
         nome = entrada.nextLine();
 
+        System.out.print("Digite sua idade: ");
+        idade = entrada.nextInt();
+
+        System.out.print("Digite sua altura: ");
+        altura = entrada.nextDouble();
+
+        System.err.println("\n=== DADOS INFORMADOS === ");
+        System.out.println("Nome" + nome);
+
+
         entrada.close(); 
     }
 }
