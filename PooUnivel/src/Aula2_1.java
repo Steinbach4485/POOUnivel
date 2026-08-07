@@ -6,11 +6,11 @@ public class Aula2_1 {
 
         Scanner entrada = new Scanner(System.in);
 
-        System.out.print("Digite seu nome: ");
-        String nome = entrada.nextLine();
+        System.out.print("Digite seu nome: "); //imprime sem pular linha
+        String nome = entrada.nextLine(); //NextLine de texto digitado no teclado
 
-        System.out.println("Olá " + nome + "!");
+        System.out.println("Olá " + nome + "!"); //imprime e pula linha abaixo
 
-        entrada.close();
+        entrada.close(); //destruindo objeto
     }
 }
