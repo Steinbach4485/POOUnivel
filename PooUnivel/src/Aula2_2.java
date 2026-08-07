@@ -22,8 +22,10 @@ public class Aula2_2 {
         System.out.print("Digite sua altura: ");
         altura = entrada.nextDouble();
 
-        System.err.println("\n=== DADOS INFORMADOS === ");
+        System.out.println("\n=== DADOS INFORMADOS === ");
         System.out.println("Nome" + nome);
+        System.out.println("idade: " + idade + "anos");
+        System.out.println("Altura: " + altura + "m");
 
 
         entrada.close(); 
