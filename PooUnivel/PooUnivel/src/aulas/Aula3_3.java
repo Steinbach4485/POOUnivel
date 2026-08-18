@@ -1,0 +1,19 @@
+package aulas;
+
+import java.util.Locale;
+import java.util.Scanner;
+
+public class Aula3_3 {
+    public static void main(String[] args) {
+        Scanner entrada = new Scanner(System.in);
+        entrada.useLocale(Locale.of("pt", "BR"));
+        //entrada.useLocale(new Locale("pt", "BR")) em outras versoes
+
+        System.out.print("Digite um Número: ");
+        double valor = entrada.nextDouble();
+
+        System.out.println("Valor digitado: " + valor);
+
+        entrada.close();
+    }
+}
