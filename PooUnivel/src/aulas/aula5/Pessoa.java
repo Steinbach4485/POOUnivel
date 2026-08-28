@@ -1,5 +1,6 @@
 package aulas.aula5;
 
+import java.awt.BorderLayout;
 import java.awt.FlowLayout;
 import javax.swing.JButton;
 import javax.swing.JFrame;
@@ -29,26 +30,35 @@ public class Pessoa extends JFrame {
 
         painelBotoes = new JPanel(new FlowLayout());
 
-        // Adicionando os botões
         painelBotoes.add(btnIncluir);
         painelBotoes.add(btnGravar);
         painelBotoes.add(btnExcluir);
         painelBotoes.add(btnSair);
 
-        add(painelBotoes, "South");
+        add(painelBotoes, BorderLayout.SOUTH);
 
         btnSair.addActionListener(e -> System.exit(0));
+    }
 
+    public Pessoa(String nome, String telefone) {
+        this();
+        this.nome = nome;
+        this.telefone = telefone;
+    }
 
-        public Pessoa(String nome, String telefone) {
-            this();
-            this.nome = nome;
-            this.telefone = telefone;
-        }
+    public String getNome() {
+        return nome;
+    }
 
-        public String getNome() {return nome; }
-        public void setNome(String nome) {this.nome = nome;}
-        public String getTelefone() { return telefone; }
-        public void setTelefone(String telefone) { this.telefone = telefone; }
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public String getTelefone() {
+        return telefone;
+    }
+
+    public void setTelefone(String telefone) {
+        this.telefone = telefone;
     }
 }
