@@ -1,0 +1,66 @@
+use bdunivel2;
+
+DROP TABLE IF EXISTS usuarios;
+DROP TABLE IF EXISTS produtos;
+
+CREATE TABLE usuarios (
+id INT AUTO_INCREMENT PRIMARI KEY,
+login VARCHAR(50) NOT NULL UNIQUE,
+senha VARCHAR(64) NOT NULL,
+data_criacao DATETIME DEFAULT CURRENT_TIMESTAMP,
+tipo VARCHAR(1) CHECK (tipo IN ('U', 'A')) DEFAULT 'U',
+ativo VARCHAR (1) CHECK (ativo IN ('T', 'F')) DEFAULT 'T',
+email VARCHAR (50)
+);
+
+CREATE TABLE produtos (
+id INT AUTO_INCREMENT PRIMARY KEY,
+nome VARCHAR(50) NOT NULL,
+preco FLOAT,
+marca VARCHAR(50)
+);
+
+INSERT INTO usuarios VALUES(1,'celia','a665a45920422f9d417e4867efdcfb8a04a1f3fff1fa07e998e86f7f7a27ae3'.
+current_date(), 'A', 'T', 'celia@gmail');
+INSERT INTO usuarios values
+(2, 'admcelia', '123', current_date(), 'A','T', 'celia@gmail');
+//criar mais 3 usuarios
+
+//fazer 5 inserts de produtos
+
+
+USE bdunivel2;
+
+DROP TABLE IF EXISTS usuarios;
+DROP TABLE IF EXISTS produtos;
+
+CREATE TABLE usuarios (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    login VARCHAR(50) NOT NULL UNIQUE,
+    senha VARCHAR(64) NOT NULL,
+    data_criacao DATETIME DEFAULT CURRENT_TIMESTAMP,
+    tipo VARCHAR(1) CHECK (tipo IN ('U', 'A')) DEFAULT 'U',
+    ativo VARCHAR(1) CHECK (ativo IN ('T', 'F')) DEFAULT 'T',
+    email VARCHAR(50)
+);
+
+CREATE TABLE produtos (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nome VARCHAR(50) NOT NULL,
+    preco FLOAT,
+    marca VARCHAR(50)
+);
+
+INSERT INTO usuarios VALUES
+(1, 'celia', 'a665a45920422f9d417e4867efdcfb8a04a1f3fff1fa07e998e86f7f7a27ae3', CURRENT_DATE(), 'A', 'T', 'celia@gmail'),
+(2, 'admcelia', '123', CURRENT_DATE(), 'A', 'T', 'admcelia@gmail'),
+(3, 'joao', '123', CURRENT_DATE(), 'U', 'T', 'joao@gmail'),
+(4, 'maria', '123', CURRENT_DATE(), 'U', 'T', 'maria@gmail'),
+(5, 'pedro', '123', CURRENT_DATE(), 'U', 'T', 'pedro@gmail');
+
+INSERT INTO produtos (nome, preco, marca) VALUES
+('Notebook', 3500.00, 'Dell'),
+('Mouse', 80.00, 'Logitech'),
+('Teclado', 150.00, 'Redragon'),
+('Monitor', 900.00, 'Samsung'),
+('Headset', 200.00, 'HyperX');
